@@ -1,0 +1,26 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+
+    double x1, y1, x2, y2;
+    double a1, b1, a2, b2;
+
+    cin >> x1 >> y1 >> x2 >> y2;
+    cin >> a1 >> b1 >> a2 >> b2;
+
+    if ((a1 >= x2)&&(a2 <= x1)) {
+        cout << "false";
+        return 0;
+    }
+
+    if ((y1 >= b2)&&(b1 >= y2)) {
+        cout << "false";
+        return 0;
+    }
+
+    cout << "true";
+
+    return 0;
+}
