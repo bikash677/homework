@@ -1,0 +1,32 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+bool compare(const vector<double>& a,const vector<double>& b) {
+    return (a[0]*a[0] + a[1]*a[1]) < (b[0]*b[0] + b[1]*b[1]);
+}
+
+int main() {
+
+    int n,k;
+    cin >> n >> k; // number of points and size of output
+
+    vector <vector <double> > points (n, vector <double> (2)); // creating n rows with 2 elements in each
+
+    double a, b;
+    for (int i = 0; i < n; i++) {  // go through all points
+        cin >> a >> b;
+        points[i][0] = a;
+        points[i][1] = b;
+    }
+
+    sort(points.begin(), points.end(), compare); // sort points by distance
+
+    for (int i = 0; i < k; i++) { 
+        cout << points[i][0] << " " << points[i][1] << endl;
+    }
+    
+    return 0;
+}
