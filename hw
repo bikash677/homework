@@ -13,7 +13,7 @@ int main() {
     int n,k;
     cin >> n >> k; // number of points and size of output
 
-    vector <vector <double> > points (n, vector <double> (2)); // creating n rows with 2 elements in each
+    vector <vector <double> > points (n, vector <double> (2)); 
 
     double a, b;
     for (int i = 0; i < n; i++) {  // go through all points
